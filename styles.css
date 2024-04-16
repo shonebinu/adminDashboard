@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/rubik-regular-webfont.woff2') format('woff2'),
+    url('./fonts/rubik-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/rubik-medium-webfont.woff2') format('woff2'),
+    url('./fonts/rubik-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/rubik-bold-webfont.woff2') format('woff2'),
+    url('./fonts/rubik-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --bg: #262626;
+  --sec-bg: #171717;
+  --font: #FAFAFA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  font-weight: normal;
+  color: var(--font);
+  background: var(--bg);
+  fill: var(--font);
+  display: grid;
+  grid-template-columns: 1.5fr 5fr 2fr;
+  grid-template-rows: auto 1fr;
+
+  nav {
+    background: var(--sec-bg);
+    grid-row: 1 / 3;
+    padding: 2rem;
+
+    ul {
+      display: grid;
+      gap: 20px;
+
+      hr {
+        margin: 1rem 0;
+        border: none;
+        height: 2px;
+        background: var(--bg);
+      }
+
+      li {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+
+        &:not(:first-child):has(>svg) {
+          padding-left: 1rem;
+        }
+
+        &:first-child>svg {
+          width: 4rem;
+        }
+
+        svg {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  header {
+    grid-column: 2 / -1;
+  }
+}
