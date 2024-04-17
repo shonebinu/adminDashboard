@@ -26,6 +26,8 @@
   --bg: #262626;
   --sec-bg: #171717;
   --font: #FAFAFA;
+  --green: #86efac;
+  --red: #fca5a5;
 }
 
 * {
@@ -173,4 +175,57 @@ body {
       }
     }
   }
+
+  main>h3,
+  aside>h3 {
+    font-weight: 500;
+    font-size: 125%;
+    margin-bottom: 1.5rem;
+  }
+
+  main h4,
+  aside h4 {
+    font-weight: 500;
+    font-size: 110%;
+    margin-bottom: .5rem;
+  }
+
+  main,
+  aside {
+    padding: 2rem 1rem 1rem 2rem;
+  }
+
+  main {
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
+      &>div {
+        display: grid;
+        gap: 2.5rem;
+
+        background: var(--sec-bg);
+        padding: 1rem;
+        border-radius: 4px;
+        box-shadow: inset 3px 0 var(--green);
+
+        &>div:nth-child(2) {
+          padding-right: 1rem;
+          padding-bottom: 1rem;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          justify-content: end;
+          gap: 1rem;
+        }
+      }
+    }
+
+    svg {
+      width: 1.3rem;
+    }
+  }
+
 }
