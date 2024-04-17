@@ -43,7 +43,7 @@ body {
   background: var(--bg);
   fill: var(--font);
   display: grid;
-  grid-template-columns: 1fr 5fr 1.5fr;
+  grid-template-columns: 1fr 5fr 1.3fr;
   grid-template-rows: auto 1fr;
 
   nav {
@@ -205,6 +205,7 @@ body {
       &>div {
         display: grid;
         gap: 2.5rem;
+        align-content: space-between;
 
         background: var(--sec-bg);
         padding: 1rem;
@@ -225,6 +226,71 @@ body {
     svg {
       width: 1.3rem;
     }
+  }
+
+
+  aside {
+
+    padding-left: 0;
+
+    hr {
+      margin: 1rem 0;
+      border: none;
+      height: 2px;
+      background: var(--bg);
+    }
+
+    .announcements,
+    .trending {
+      display: flex;
+      flex-direction: column;
+      background: var(--sec-bg);
+      padding: 2rem;
+      border-radius: 5px;
+    }
+
+    .announcements {
+      margin-bottom: 2rem;
+
+      h5 {
+        font-size: .95rem;
+        font-weight: 500;
+        margin-bottom: .3rem;
+      }
+
+      p {
+        font-size: .85rem;
+      }
+    }
+
+    .trending {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+
+      img {
+        width: 3rem;
+        border-radius: 50%;
+      }
+
+      &>div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        &+div {
+          padding-top: 1rem;
+        }
+
+        p:first-child {
+          padding-bottom: .2rem;
+        }
+
+        p:last-child {
+          font-size: .9rem;
+        }
+      }
+    }
+
   }
 
 }
