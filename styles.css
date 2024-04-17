@@ -22,12 +22,23 @@
   font-style: normal;
 }
 
+/*
+:root {
+  --font: #171717;
+  --bg: #e5e5e5;
+  --sec-bg: #FAFAFA;
+  --green: #86efac;
+  --red: #fca5a5;
+}
+*/
+
 :root {
   --bg: #262626;
   --sec-bg: #171717;
   --font: #FAFAFA;
-  --green: #86efac;
-  --red: #fca5a5;
+  --sec-font: #A3A3A3;
+  --green: #86EFAC;
+  --red: #FCA5A5;
 }
 
 * {
@@ -138,7 +149,7 @@ body {
       }
 
       button:active {
-        color: var(--font);
+        color: var(--sec-font);
         background: var(--sec-bg);
       }
 
@@ -202,6 +213,10 @@ body {
       gap: 1rem;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
+      p {
+        color: var(--sec-font);
+      }
+
       &>div {
         display: grid;
         gap: 2.5rem;
@@ -260,6 +275,7 @@ body {
 
       p {
         font-size: .85rem;
+        color: var(--sec-font);
       }
     }
 
@@ -287,6 +303,7 @@ body {
 
         p:last-child {
           font-size: .9rem;
+          color: var(--sec-font);
         }
       }
     }
